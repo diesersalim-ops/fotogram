@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotogram – Dein persönliches Fotoalbum</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="Fotogram Startseite">
+        <img class="logo__icon" src="assets/logo.png" alt="" width="28" height="27" />
+        <span class="logo__text">Fotogram</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="gallery-page">
+    <h1 class="gallery-page__title">Your personal photo album</h1>
+    <section class="gallery-section" aria-label="Fotogalerie">
+      <ul class="gallery" id="gallery"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <img class="site-footer__logo" src="assets/logo-da.png" alt="Developer Akademie" width="134" height="32" />
+      <small class="site-footer__copyright">© 2023 Developer Akademie GmbH</small>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <section class="lightbox__dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <header class="lightbox__header">
+        <h2 class="lightbox__title" id="lightbox-title"></h2>
+        <button class="lightbox__close" type="button" data-close aria-label="Schließen">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </header>
+      <img class="lightbox__image" id="lightbox-image" src="" alt="" />
+      <footer class="lightbox__footer">
+        <button class="lightbox__nav lightbox__nav--prev" type="button" id="lightbox-prev" aria-label="Vorheriges Bild">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <span class="lightbox__counter" id="lightbox-counter" aria-live="polite"></span>
+        <button class="lightbox__nav lightbox__nav--next" type="button" id="lightbox-next" aria-label="Nächstes Bild">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </footer>
+    </section>
+  </div>
+
+  <script defer src="src/utils/dom.js"></script>
+  <script defer src="src/data/photos.js"></script>
+  <script defer src="src/templates.js"></script>
+  <script defer src="src/gallery.js"></script>
+  <script defer src="src/lightbox.js"></script>
+  <script defer src="src/main.js"></script>
+</body>
+</html>
