@@ -21,11 +21,15 @@
 }
 
 body {
-  margin: 0;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.gallery-page {
+  flex: 1;
+}
+
 
 button {
   font-family: inherit;
