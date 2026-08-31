@@ -64,6 +64,7 @@ img {
 }
 
 .gallery-page {
+  flex: 1;                 ← neu
   max-width: var(--content-max-width);
   margin-inline: auto;
   padding: 3rem 2rem 5rem;
